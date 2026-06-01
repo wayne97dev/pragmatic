@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TEST — Holding is providing liquidity</title>
+<meta name="description" content="TEST is a loyalty-weighted, self-deepening Uniswap v4 liquidity engine on Base. Hold the token, hold a facet of the pool, earn the fees." />
+<meta property="og:title" content="TEST — Holding is providing liquidity" />
+<meta property="og:description" content="A loyalty-weighted, self-deepening Uniswap v4 liquidity engine on Base." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#08080c" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<div class="bg-glow" aria-hidden="true"></div>
+
+<!-- ───────────────────────── nav ───────────────────────── -->
+<header class="nav" id="top">
+  <a class="brand" href="#top">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">TEST</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#idea">Idea</a>
+    <a href="#diff">Different</a>
+    <a href="#facets">Facets</a>
+    <a href="#fair">Fair</a>
+    <a href="#numbers">Numbers</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="btn btn-ghost" data-link="chart" href="#">Chart</a>
+    <a class="btn btn-spectrum" data-link="buy" href="#">Buy on Base</a>
+  </div>
+</header>
+
+<!-- ───────────────────────── hero ───────────────────────── -->
+<section class="hero">
+  <div class="hero-copy reveal">
+    <div class="pill">Base · Uniswap v4 hook · DN404 facets</div>
+    <h1>Holding <span class="spectrum-text">is</span> providing liquidity.</h1>
+    <p class="lede">
+      <strong>TEST</strong> is one Uniswap&nbsp;v4 pool that <em>is</em> the token. Every whole TEST you
+      hold mints a <strong>facet</strong> — your fractional share of the single LP position — and every
+      swap streams fees to facet holders. No staking. No wrappers. Just hold.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-spectrum btn-lg" data-link="buy" href="#">Buy on Base</a>
+      <a class="btn btn-ghost btn-lg" href="#idea">How it works ↓</a>
+    </div>
+    <div class="contract" data-link="contract">
+      <span class="contract-label">Contract</span>
+      <code>0x… &nbsp;(deploying soon)</code>
+    </div>
+  </div>
+
+  <div class="hero-art reveal" aria-hidden="true">
+    <!-- white beam → prism → refracted spectrum fan -->
+    <svg viewBox="0 0 520 520" class="prism-svg" role="img" aria-label="A prism refracting white light into a spectrum">
+      <defs>
+        <linearGradient id="beamWhite" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+          <stop offset="1" stop-color="#fff" stop-opacity=".9"/>
+        </linearGradient>
+        <radialGradient id="prismGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#8a7bff" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#8a7bff" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <circle cx="260" cy="260" r="210" fill="url(#prismGlow)" class="glow-pulse"/>
+
+      <!-- incoming white beam -->
+      <line x1="20" y1="260" x2="232" y2="260" stroke="url(#beamWhite)" stroke-width="3" class="beam-in"/>
+
+      <!-- refracted spectrum fan -->
+      <g class="fan">
+        <line class="ray" x1="262" y1="262" x2="500" y2="150" stroke="#ff5d5d"/>
+        <line class="ray" x1="262" y1="262" x2="500" y2="190" stroke="#ff9e3d"/>
+        <line class="ray" x1="262" y1="262" x2="500" y2="230" stroke="#ffe24d"/>
+        <line class="ray" x1="262" y1="262" x2="500" y2="270" stroke="#5dff97"/>
+        <line class="ray" x1="262" y1="262" x2="500" y2="310" stroke="#4dd6ff"/>
+        <line class="ray" x1="262" y1="262" x2="500" y2="350" stroke="#6b8cff"/>
+        <line class="ray" x1="262" y1="262" x2="500" y2="390" stroke="#c46bff"/>
+      </g>
+
+      <!-- the prism -->
+      <polygon points="250,170 330,360 170,360" class="prism-body"/>
+      <polygon points="250,170 330,360 170,360" class="prism-edge"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ───────────────────────── idea ───────────────────────── -->
+<section id="idea" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">The idea</span>
+    <h2>One pool. A spectrum of holders.</h2>
+    <p>The contract is the ERC-20, the owner of a single v4 liquidity position, and the fee router — all at once. Ownership of the token <em>is</em> ownership of the liquidity.</p>
+  </div>
+  <div class="grid-3">
+    <article class="card reveal">
+      <div class="card-ico">◈</div>
+      <h3>Hold a facet</h3>
+      <p>Each whole TEST mints one facet NFT — a DN404-style mirror of your balance — worth a slice of the same pool. Sell and it burns. Fewer facets, fatter slices.</p>
+    </article>
+    <article class="card reveal">
+      <div class="card-ico">≈</div>
+      <h3>Fees stream in</h3>
+      <p>Every swap pays fees straight to the position. They accrue to facet holders pro-rata — claimable on-chain, no third party, no lockups.</p>
+    </article>
+    <article class="card reveal">
+      <div class="card-ico">⬡</div>
+      <h3>Supply is fixed</h3>
+      <p>5,000 TEST, minted once, seeded entirely into the pool. No mint switch, no team bag dripping out. The float is the pool.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ───────────────────────── different ───────────────────────── -->
+<section id="diff" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">What makes it different</span>
+    <h2>Three upgrades on the engine.</h2>
+    <p>The same "holding is LPing" core, with economics rebuilt to reward conviction and grow the pool itself.</p>
+  </div>
+  <div class="grid-3">
+    <article class="card feature reveal">
+      <span class="tag">A</span>
+      <h3>Loyalty weighting</h3>
+      <p>Fees are split by <strong>weight</strong>, not headcount. A facet's weight climbs the longer you hold it — up to <strong>2×</strong> — and resets the moment you sell. Diamond hands earn double; mercenaries earn base.</p>
+      <ul class="ticks">
+        <li>1.00× → 1.25× (7d) → 1.50× (30d) → 2.00× (90d)</li>
+        <li>Permissionless <code>bumpLoyalty()</code></li>
+      </ul>
+    </article>
+    <article class="card feature reveal">
+      <span class="tag">B</span>
+      <h3>POL flywheel</h3>
+      <p>A slice of every fee (default <strong>15%</strong>) is compounded straight back into the position. Liquidity deepens over time → less slippage → more volume → more fees. The prism grows.</p>
+      <ul class="ticks">
+        <li>Anyone can call <code>compoundPOL()</code></li>
+        <li>Protocol-owned, never withdrawable</li>
+      </ul>
+    </article>
+    <article class="card feature reveal">
+      <span class="tag">C</span>
+      <h3>Dynamic fee</h3>
+      <p>A v4 dynamic-fee hook: a decaying <strong>anti-snipe ramp</strong> at launch, a <strong>sell premium</strong> so dumps pay the holders, and a volatility component — all <strong>hard-capped at 10%</strong>.</p>
+      <ul class="ticks">
+        <li>Computed in <code>beforeSwap</code></li>
+        <li>No honeypot fee is ever reachable</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ───────────────────────── facets ───────────────────────── -->
+<section id="facets" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">Facets</span>
+    <h2>The longer you hold, the brighter your facet.</h2>
+    <p>Each facet is a fully on-chain generative artwork and your live receipt for a share of the pool. Loyalty turns it up.</p>
+  </div>
+  <div class="tiers reveal">
+    <div class="tier"><div class="tier-swatch t1"></div><span class="tier-mult">1.00×</span><span class="tier-age">day one</span></div>
+    <div class="tier"><div class="tier-swatch t2"></div><span class="tier-mult">1.25×</span><span class="tier-age">7 days</span></div>
+    <div class="tier"><div class="tier-swatch t3"></div><span class="tier-mult">1.50×</span><span class="tier-age">30 days</span></div>
+    <div class="tier"><div class="tier-swatch t4"></div><span class="tier-mult">2.00×</span><span class="tier-age">90 days</span></div>
+  </div>
+</section>
+
+<!-- ───────────────────────── fair ───────────────────────── -->
+<section id="fair" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">Fair by construction</span>
+    <h2>No rug. By the absence of code.</h2>
+    <p>These aren't promises — they're things the contract simply cannot do. Read the source.</p>
+  </div>
+  <div class="grid-2 reveal">
+    <div class="guarantee"><span class="g-check">✓</span><div><h4>Fixed supply</h4><p>Minted once in the constructor. No mint function, no owner mint path.</p></div></div>
+    <div class="guarantee"><span class="g-check">✓</span><div><h4>Liquidity is locked</h4><p>Nothing removes a non-zero amount of liquidity or moves the LP out. Fees collect; POL only adds.</p></div></div>
+    <div class="guarantee"><span class="g-check">✓</span><div><h4>Fee capped at 10%</h4><p>The dynamic fee is hard-capped in code. Owner setters are bounded. No 100% trap exists.</p></div></div>
+    <div class="guarantee"><span class="g-check">✓</span><div><h4>No pause, no blacklist</h4><p>No transfer tax to the owner, no freeze. Owner power: one-time seed + bounded params.</p></div></div>
+  </div>
+</section>
+
+<!-- ───────────────────────── numbers ───────────────────────── -->
+<section id="numbers" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">Numbers</span>
+    <h2>The whole thing, in figures.</h2>
+  </div>
+  <div class="stats reveal">
+    <div class="stat"><span class="stat-num">5,000</span><span class="stat-lbl">total supply</span></div>
+    <div class="stat"><span class="stat-num">1</span><span class="stat-lbl">pool · single-sided</span></div>
+    <div class="stat"><span class="stat-num spectrum-text">2×</span><span class="stat-lbl">max loyalty boost</span></div>
+    <div class="stat"><span class="stat-num">15%</span><span class="stat-lbl">fees → POL flywheel</span></div>
+    <div class="stat"><span class="stat-num">1–10%</span><span class="stat-lbl">dynamic swap fee</span></div>
+    <div class="stat"><span class="stat-num">0</span><span class="stat-lbl">team allocation</span></div>
+  </div>
+</section>
+
+<!-- ───────────────────────── cta ───────────────────────── -->
+<section class="closer reveal">
+  <h2>Hold the light.</h2>
+  <p>Be a facet. Earn the spectrum.</p>
+  <div class="hero-actions">
+    <a class="btn btn-spectrum btn-lg" data-link="buy" href="#">Buy on Base</a>
+    <a class="btn btn-ghost btn-lg" data-link="chart" href="#">Live chart</a>
+  </div>
+</section>
+
+<!-- ───────────────────────── footer ───────────────────────── -->
+<footer class="footer">
+  <div class="footer-row">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">TEST</span></div>
+    <nav class="footer-links">
+      <a data-link="x" href="#">X / Twitter</a>
+      <a data-link="contract" href="#">Contract</a>
+      <a data-link="chart" href="#">DexScreener</a>
+      <a data-link="docs" href="#">Docs</a>
+    </nav>
+  </div>
+  <p class="fine">
+    Built on Base · Uniswap v4. Forked with attribution from PRISM (0xsolazy, MIT) and DN404 (Vectorized).
+    Unaudited software — nothing here is financial advice. Links marked “soon” activate at launch.
+  </p>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
